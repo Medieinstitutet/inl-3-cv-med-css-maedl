@@ -1,4 +1,4 @@
-$debugging: true;
+$debugging: false;
 @if $debugging {
 
   main {
@@ -13,17 +13,17 @@ $debugging: true;
     outline: 3px solid green;
   }
 
-  aside {
-    outline: 3px solid orange;
-  }
+  // aside {
+  //   outline: 3px solid orange;
+  // }
 
   section {
     outline: 3px solid red;
   }
 
-  div {
-    outline: 2px solid purple;
-  }
+  // div {
+  //   outline: 2px solid purple;
+  // }
 
   
 }

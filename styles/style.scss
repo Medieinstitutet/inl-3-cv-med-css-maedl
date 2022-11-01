@@ -1,5 +1,16 @@
-// @import 'normalize';
+@import 'normalize';
 @import 'debugger';
-@import 'general';  // variables and general styles
+@import 'general';  // variables and general styles 
 @import 'mobile';
-@import 'desktop';
+
+@media only screen and (min-width: 768px) { 
+  @import 'tablet';
+}
+
+@media only screen and (min-width: 1024px) {
+  @import 'laptop';   // small to large laptops ish
+}
+
+@media only screen and (min-width: 1600px) {
+  @import 'desktop';
+}

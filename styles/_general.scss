@@ -1,6 +1,16 @@
 :root {
   --border-radius: 5px;
   --box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  --dark-bg-color: rgb(20, 8, 1);
+  --light-bg-color: rgb(239, 239, 239);
+  --accent-color: rgb(205, 125, 39);
+  --profile-img-size: 15vh;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *,
@@ -9,6 +19,13 @@
   box-sizing:border-box;
 }
 
-h1, h2, p {
+h1, h2, p, hr {
   margin: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

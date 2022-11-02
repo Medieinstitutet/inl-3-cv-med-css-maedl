@@ -8,6 +8,7 @@
 }
 
 main {
+  padding: 0;
   border: 1px solid #000;
   height: 90vh;
   max-width: 70vw;
@@ -15,22 +16,31 @@ main {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: min-content 3fr;
-  gap: 10px;
-  padding: 10px;
+
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
 .image-container {
   padding: 0;
+  height: auto;
 }
 
 .profile-pic {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  height: 175px;
-  width: 175px;
   object-fit: cover;
+}
+
+.about-me {
+
+}
+aside.contact-skills {
+
+  .contact {
+    height: auto;
+  }
+  
 }
 
 .edu-exp-section {

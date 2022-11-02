@@ -1,12 +1,97 @@
+.body {
+  background-color: var(--light-bg-color);
+}
+
+main {
+  background-color: var(--light-bg-color);
+}
+
 .image-container {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  align-items: center;
+  background-color: var(--light-bg-color);
+  height: 20vh;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  height: 15vh;
+  width: 15vh;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.about-me {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--light-bg-color);
+  overflow-y: auto;
+  padding: 0 2rem;
+}
+
+.left-dark-heading {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dark-font {
+  color: var(--dark-bg-color);
+}
+
+aside.contact-skills {
+  background-color: var(--dark-bg-color);
+  color: var(--light-bg-color);
+
+  .contact {
+    height: 50vh;
+    background-color: lightblue;
+    display: grid;
+    grid-template-rows: min-content 2fr 1fr;
+    justify-content: center;
+    padding: 1rem 0rem;
+  }
+
+  h2 {
+    border: 1px solid #000;
+  }
+
+  ul {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 0.9rem;
+      display: block;
+    }
+  
+    hr {
+      border: solid 1px var(--light-bg-color);
+      width: 80%;
+      margin: 0.5rem auto;
+    }
+  }
+
+  .contact .skill-heading {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+  }
+}
+
+
+
+.light-font {
+  color: var(--light-bg-color);
+}
+
+.name {
+  background-color: var(--accent-color);
 }

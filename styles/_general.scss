@@ -5,6 +5,7 @@
   --light-bg-color: rgb(239, 239, 239);
   --accent-color: rgb(205, 125, 39);
   --profile-img-size: 15vh;
+  --bezier: cubic-bezier(.84,.58,.69,.59);
 }
 
 @mixin flex-center {
@@ -19,7 +20,18 @@
   box-sizing:border-box;
 }
 
-h1, h2, p, hr {
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html, body, h1, h2, p, hr {
+  padding: 0;
   margin: 0;
 }
 

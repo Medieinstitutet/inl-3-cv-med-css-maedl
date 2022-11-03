@@ -1,9 +1,9 @@
-.body {
+body {
   background-color: var(--light-bg-color);
 }
 
 .container {
-height: 100vh;
+
 }
 
 main {
@@ -119,10 +119,11 @@ aside {
       position: absolute;
       width: 2rem;
       height: 2rem;
-      bottom: 75%;
+      top: 10%;
       animation: arrowmation 1.25s var(--bezier) forwards;
       animation-delay: 0.25s;
       opacity: 0;
+    }
 
     @keyframes arrowmation {
       50% {
@@ -131,11 +132,19 @@ aside {
 
       100% {
         opacity: 1;
-        bottom: 50%;
+        top: 50%;
       }
     }
-  }
 }
+
+@media screen and (orientation:landscape) {
+  
+  .skill-heading {
+    visibility: hidden;
+  }
+
+}
+
 
 .skill-box {
   padding: 1rem 0;
@@ -157,7 +166,8 @@ aside {
       }
 
       progress {
-        background-color: var(--light-bg-color)
+        background-color: var(--light-bg-color);
+        border-radius: 5px;
       }
     }
   }

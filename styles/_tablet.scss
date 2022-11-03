@@ -1,54 +1,15 @@
 .container {
+  background-color: var(--light-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 main {
-  padding: 0;
-  border: 1px solid #000;
+  width:50vw;
   height: 90vh;
-  max-width: 70vw;
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: min-content 3fr;
-
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  border: 1px solid #000;
 }
-
-.image-container {
-  padding: 0;
-  height: auto;
-}
-
-.profile-pic {
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  object-fit: cover;
-}
-
-.about-me {
-
-}
-aside.contact-skills {
-
-  .contact {
-    height: auto;
-  }
-  
-}
-
-.edu-exp-section {
-  overflow-y: scroll;
-  min-height: 0;
-}
-
-.contact-link {
-  visibility: hidden;
-}
-
-

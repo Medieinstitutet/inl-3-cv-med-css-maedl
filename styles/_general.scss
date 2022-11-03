@@ -5,6 +5,7 @@
   --light-bg-color: rgb(239, 239, 239);
   --accent-color: rgb(205, 125, 39);
   --profile-img-size: 15vh;
+  --p-content-padding: 0 1.5rem;
   --bezier: cubic-bezier(.84,.58,.69,.59);
 }
 
@@ -12,6 +13,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin header-margin {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 *,
@@ -30,7 +36,7 @@ body {
 }
 
 
-html, body, h1, h2, p, hr {
+html, body, h1, h2, h3, p, hr {
   padding: 0;
   margin: 0;
 }
@@ -40,4 +46,12 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.dark-font {
+  color: var(--dark-bg-color);
+}
+
+.light-font {
+  color: var(--light-bg-color);
 }

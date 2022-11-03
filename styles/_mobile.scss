@@ -33,116 +33,169 @@ img {
   justify-content: center;
   background-color: var(--light-bg-color);
   overflow-y: auto;
-  padding: 0 2rem;
+  padding: var(--p-content-padding);
 }
 
-.left-dark-heading {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+.about-me-heading {
+@include header-margin;
 }
 
-.dark-font {
-  color: var(--dark-bg-color);
-}
-
-aside.contact-skills {
+aside {
   background-color: var(--dark-bg-color);
   color: var(--light-bg-color);
-
-  .contact {
-    height: 50vh;
-    display: grid;
-    grid-template-rows: min-content 2fr 1fr;
-    justify-content: center;
-    padding: 1rem 0rem;
   }
 
-  .contact-heading {
-    margin-bottom: 1rem;
+.contact-section {
+  height: 50vh;
+  display: grid;
+  grid-template-rows: min-content 2fr 1fr;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+
+#contact-heading {
+  margin-bottom: 1rem;
+  justify-self: center;
+}
+
+.contact-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  a, a:visited {
+    color: var(--light-bg-color);
+    display: block;
+    text-decoration: none;
+  }
+
+  li {
+    margin-bottom: 1.25rem;
+    // border-bottom: solid 1px var(--light-bg-color);
+    // border-bottom-width: 50%;
+    position: relative;
+    width: 100%;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    width: 8rem;
+    display: block;
+    background-color: var(--light-bg-color);
+    height: 1px;
+    bottom: -0.75rem;
+    transform: translateX(25%);
+  }
+}
+
+.skill-heading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+    h2 {
+      position: absolute;
+      opacity: 0;
+      top: -10%;
+      animation: skillmation 1.25s var(--bezier) forwards;
+      animation-delay: 0.25s;
+
+      a {
+        color: var(--light-bg-color);
+      }
+    }
+
+    @keyframes skillmation {
+      50% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      bottom: 75%;
+      animation: arrowmation 1.25s var(--bezier) forwards;
+      animation-delay: 0.25s;
+      opacity: 0;
+
+    @keyframes arrowmation {
+      50% {
+        opacity: 0.1;
+      }
+
+      100% {
+        opacity: 1;
+        bottom: 50%;
+      }
+    }
+  }
+}
+
+.skill-box {
+  padding: 1rem 0;
+  p {
     text-align: center;
+    margin-bottom: 1rem;
   }
 
-  ul {
-    display: flex;
+  .skill-list {
+    @include flex-center;
     flex-direction: column;
 
-    a, a:visited {
-      color: var(--light-bg-color);
-      display: block;
-      text-decoration: none;
-    }
-
     li {
-      margin-bottom: 0.5rem;
-    }
+      
 
-
-
-    hr {
-      border: solid 1px var(--light-bg-color);
-      width: 80%;
-      margin: 0.5rem auto;
-    }
-  }
-
-
-
-  .skill-heading {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-
-      h2 {
-        position: absolute;
-        opacity: 0;
-        top: -10%;
-        animation: skillmation 1.25s var(--bezier) forwards;
-        animation-delay: 0.25s;
-
-        a {
-          color: var(--light-bg-color);
-        }
+      p {
+        font-size: 1.25rem;
+        text-align: center;
       }
 
-      @keyframes skillmation {
-        50% {
-          opacity: 0.1;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      img {
-        position: absolute;
-        width: 2rem;
-        height: 2rem;
-        bottom: 100%;
-        animation: arrowmation 1.25s var(--bezier) forwards;
-        animation-delay: 0.25s;
-        opacity: 0;
-
-      @keyframes arrowmation {
-        50% {
-          opacity: 0.1;
-        }
-
-        100% {
-          opacity: 1;
-          bottom: 50%;
-        }
+      progress {
+        background-color: var(--light-bg-color)
       }
     }
   }
 }
 
+.edu-exp-article {
+
+  .name {
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  
+    .name-heading {
+      margin-bottom: 1rem;
+    }
+  }
+
+  section {
+    padding: var(--p-content-padding);
+
+    h2 {
+      @include header-margin;
+    }
+
+    h3 {
+
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .year {
+
+    }
+  }
 
 
-.light-font {
-  color: var(--light-bg-color);
-}
-
-.name {
-  background-color: var(--accent-color);
 }

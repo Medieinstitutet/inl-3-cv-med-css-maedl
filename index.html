@@ -30,58 +30,57 @@
       <img class="profile-pic" src="/images/max-edlund.jpg" alt="handsome portrait of Max Edlund">
     </div>
     <article class="about-me">
-      <h1 class="left-dark-heading">About me</h1> <!-- hisspitch får ses som viktigare än mitt namn. detta beslut har absolut ingenting med layout-krångel att göra ;D -->
+      <h1 class="about-me-heading">About me</h1> <!-- hisspitch får ses som viktigare än mitt namn. detta beslut har absolut ingenting med layout-krångel att göra ;D -->
       <p class="dark-font">
         Addicted to the feeling you get when a snippet of code does what you want it to! After more than a decade of working with physically demanding jobs, I wanted something that would allow me to evolve further. Naturally I turned to one of my passions as a youth, meddling with HTML and CSS, and is now fully committed to learning all I can about web development.
       </p>
     </article>
   
-    <aside class="contact-skills">
-      <section class="contact">
-        <h2 class="contact-heading">Contact</h2>
-        <ul>
+    <aside>
+      <section class="contact-section">
+        <h2 id="contact-heading">Contact</h2>
+        <ul class="contact-list">
           <li> <a href="tel:+46-76-201-88-85">+46 76 201 88 85</a> </li>
-          <hr>
           <li> <a href="mailto:max.edlund@medieinstitutet.se">max.edlund@medieinstitutet.se</a> </li>
-          <hr>
           <li> <a href="https://github.com/maedl"> My Github profile </a> </li>
-          <hr>
           <li> <a href="https://www.linkedin.com/in/max-edlund/"> My Linkedin profile</a> </li>
         </ul>
         <div class="skill-heading"> 
-          <h2 id="skill-overview"><a href="#skill-overview">Skill Overview</a></h2>
+          <h2><a href="#skill-anchor">Skill Overview</a></h2>
           <img src="icons/white-down-arrow.png" alt="" height="32" width="32">
         </div>
       </section>
-      <div class="skills">
-        
-        <div id="skill-box" class="light-font">
-          <ul>
-            <li>
-              HTML
-              <div class="progress">*****</div>   <!-- <progress>s or <div>s? -->
-            </li>
-            <li>
-              CSS
-              <div class="progress">*****</div>
-            </li>
-            <li>
-              JavaScript
-              <div class="progress">*****</div>
-            </li>
-            <li>
-              C#
-              <div class="progress">*****</div>
-            </li>
-          </ul>
-        </div>
+      <div class="skill-box" id="skill-anchor">
+        <p>A brief overview of my technical skills</p>
+        <ul class="skill-list">
+          <li>
+            <p>HTML</p>
+            <progress max="100" value="90"></progress>
+          </li>
+          <li>
+            <p>CSS/Sass</p>
+            <progress max="100" value="80"></progress>
+          </li>
+          <li>
+            <p>JavaScript</p>
+            <progress max="100" value="10"></progress>
+          </li>
+          <li>
+            <p>React</p>
+            <progress max="100" value="0"></progress>
+          </li>
+          <li>
+            <p>C#</p>
+            <progress max="100" value="30"></progress>
+          </li>
+        </ul>
       </div>
     </aside>
 
-    <article class="edu-exp-section"> 
+    <article class="edu-exp-article"> 
       <div class="name">
-        <h2 id="name-heading">Max Edlund</h2> 
-        <h3 id="job-title">Junior Frontend Developer</h3> 
+        <h2 class="name-heading">Max Edlund</h2> 
+        <h3 class="job-title">Junior Frontend Developer</h3> 
       </div>
       <section>
         <h2>Education</h2>
@@ -103,7 +102,14 @@
       <section>
         <h2>Work Experience</h2>
         <p class="dark-font">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam omnis fugiat repellat in culpa eligendi, expedita sapiente nobis ad nesciunt vitae dolor quam sunt neque soluta commodi voluptates impedit. Quasi dignissimos harum, nobis sequi beatae mollitia consequatur, ipsum reprehenderit ut voluptates dolor ad minus numquam illum cumque dolore. Velit inventore quibusdam vel, dicta vero ipsam itaque. Quidem ullam provident illo ipsa nisi rerum nesciunt cum! Consequuntur ratione quas ex tempore neque doloremque error minima, ipsa numquam velit placeat quisquam eveniet nostrum repellendus iste dolore ut laborum. Officiis consectetur minus totam a? Quibusdam delectus a perspiciatis doloribus cum repellendus nostrum earum obcaecati optio maiores. Ea laboriosam, cum similique harum corrupti aliquam ipsum voluptate corporis aut! Labore, nobis! Quasi dolor, perferendis dicta necessitatibus beatae at, aliquam placeat nobis est itaque nam voluptate cumque doloremque quisquam ab eius ratione tempore illo debitis, tempora porro.
+          The last year of my high school included internship at a company, where I was offered employment after graduation. Since then, I have been working for over a decade at 2 different painting companies with an increasing amount of responsibility. At most I was the team leader of 8 colleagues responsible for cooperation with the client and other occupational groups at a big construction site.
+
+        </p>
+        <p class="dark-font">
+          I later changed industry after feeling I had reached a point where I had limited possibility for further development. I spent a few years working the night shift with transportation for a distribution company, where me and a colleague were responsible for planning and organizing routes for the day shift staff.
+        </p>
+        <p class="dark-font">
+          I have also done my fair share of driving forklift at nights, working with fast food and moving heavy objects from one place to another!
         </p>
         <a class="contact-link" href="#contact-heading">My contact info</a>  <!-- tänker mig visibilty: hidden; på desktop-->
       </section>

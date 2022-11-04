@@ -8,6 +8,9 @@
   --p-content-padding: 0 1.5rem;
   --bezier: cubic-bezier(.84,.58,.69,.59);
   --img-gradient: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(2,1,0,0.24) 15%, rgba(14,8,0,0) 100%);
+  --heading-font: 'Cairo', sans-serif;
+  --p-font: 'Cairo', sans-serif;
+  --mono-font: 'Xanh Mono', monospace;
 }
 
 @mixin flex-center {
@@ -42,17 +45,16 @@ html, body, h1, h2, h3, p, hr {
   margin: 0;
 }
 
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+p {
+  font-family: var(--p-font);
+}
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.dark-font {
-  color: var(--dark-bg-color);
-}
-
-.light-font {
-  color: var(--light-bg-color);
 }

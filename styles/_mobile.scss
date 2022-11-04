@@ -2,10 +2,6 @@ body {
   background-color: var(--light-bg-color);
 }
 
-.container {
-
-}
-
 main {
   background-color: var(--light-bg-color);
 }
@@ -20,14 +16,14 @@ main {
   height: 20vh;
   padding: 1rem;
   position: relative;
-}
 
-
-img {
-  height: 10vh;
-  width: 10vh;
-  border-radius: 50%;
-  object-fit: cover;
+  img {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow);
+  }
 }
 
 .about-me {
@@ -186,9 +182,14 @@ aside {
 
 .skill-box {
   padding: 1rem 0;
+
+  .skill-subtitle {
+    margin-bottom: 2rem;
+  }
+
   p {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .skill-list {
@@ -206,12 +207,16 @@ aside {
       progress {
         background-color: var(--light-bg-color);
         border-radius: 5px;
+        height: 0.75rem;
+        margin-bottom: 1.25rem;
       }
     }
   }
 }
 
 .edu-exp-article {
+
+  overflow-y: auto;
 
   .name {
     background-color: var(--accent-color);

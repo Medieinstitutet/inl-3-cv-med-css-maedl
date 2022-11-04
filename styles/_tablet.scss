@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 1rem 0;
   margin: 0;
   height: 100%;
 }
@@ -11,6 +11,8 @@
 main {
   width:70vw;
   border: 1px solid #000;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .about-me {
@@ -24,5 +26,10 @@ main {
     left: 5rem;
     right: 5rem;
   }
+}
+
+.contact-section {
+  height: auto;
+  grid-template-rows: min-content 2fr 0;
 }
 

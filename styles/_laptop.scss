@@ -24,10 +24,21 @@ main {
 }
 
 .about-me {
+  background-color: var(--light-bg-color);
+
+
+  .about-me-heading {
+    top: 2rem;
+    color: var(--dark-bg-color);
+  }
 
   .about-me-p {
-    background-color: rgba($color: black, $alpha: 0.8);
+    top: 4.75rem;
+    left: 5rem;
+    right: 5rem;
+    color: var(--dark-bg-color);
   }
+
 }
 
 .aside {

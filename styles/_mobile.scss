@@ -34,7 +34,9 @@ main {
 
   .about-me-heading {
     position: absolute;
+    top: 1rem;
     left: 2rem;
+    font-size: 1.5rem;
     color: var(--light-bg-color);
     animation: headingmation 1.5s linear forwards;
     animation-delay: 0.5s;
@@ -43,7 +45,7 @@ main {
   }
   
   @keyframes headingmation {
-  
+
     75% {
       opacity: 1;
       left: 2rem;
@@ -59,7 +61,7 @@ main {
   .about-me-p {
     color: var(--light-bg-color);
     position: absolute;
-    top: 2.75rem;
+    top: 3.75rem;
     left: 2rem;
     right: 2rem;
     opacity: 0;
@@ -197,7 +199,7 @@ aside {
     flex-direction: column;
 
     li {
-      
+      font-family: var(--mono-font);
 
       p {
         font-size: 1.25rem;
@@ -228,6 +230,10 @@ aside {
     .name-heading {
       margin-bottom: 1rem;
     }
+
+    .job-title {
+      font-family: var(--mono-font);
+    }
   }
 
   section {
@@ -250,5 +256,10 @@ aside {
     }
   }
 
+  .signature {
+    padding-left: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+  }
 
 }

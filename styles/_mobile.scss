@@ -12,32 +12,74 @@ main {
 
 .image-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-bg-color);
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: var(--img-gradient),
+                    url('/images/max-edlund-working-sm.jpg');
+  background-size: cover;
   height: 20vh;
-  padding-top: 1rem;
+  padding: 1rem;
+  position: relative;
 }
 
+
 img {
-  height: 18vh;
-  width: 18vh;
+  height: 10vh;
+  width: 10vh;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .about-me {
   height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--light-bg-color);
+  position: relative;
+  background-color: var(--dark-bg-color);
   overflow-y: auto;
-  padding: var(--p-content-padding);
+
+  .about-me-heading {
+    position: absolute;
+    left: 2rem;
+    color: var(--light-bg-color);
+    animation: headingmation 1.5s linear forwards;
+    animation-delay: 0.5s;
+    z-index: 100;
+    opacity: 0;
+  }
+  
+  @keyframes headingmation {
+  
+    75% {
+      opacity: 1;
+      left: 2rem;
+    }
+
+    100% {
+      left: 4rem;
+      opacity: 1;
+    }
+
+  }
+  
+  .about-me-p {
+    color: var(--light-bg-color);
+    position: absolute;
+    top: 2.75rem;
+    left: 2rem;
+    right: 2rem;
+    opacity: 0;
+    animation: fade-in 1s var(--bezier) forwards;
+    animation-delay: 2s;
+  }
+
 }
 
-.about-me-heading {
-@include header-margin;
+@keyframes fade-in {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 aside {
@@ -56,12 +98,18 @@ aside {
 #contact-heading {
   margin-bottom: 1rem;
   justify-self: center;
+  animation: fade-in 1.25s var(--bezier) forwards;
+  opacity: 0;
+  animation-delay: 3s;
 }
 
 .contact-list {
   display: flex;
   align-items: center;
   flex-direction: column;
+  animation: fade-in 1.25s var(--bezier) forwards;
+  opacity: 0;
+  animation-delay: 3.5s;
 
   a, a:visited {
     color: var(--light-bg-color);
@@ -71,8 +119,6 @@ aside {
 
   li {
     margin-bottom: 1.25rem;
-    // border-bottom: solid 1px var(--light-bg-color);
-    // border-bottom-width: 50%;
     position: relative;
     width: 100%;
   }
@@ -98,20 +144,11 @@ aside {
       position: absolute;
       opacity: 0;
       top: -10%;
-      animation: skillmation 1.25s var(--bezier) forwards;
-      animation-delay: 0.25s;
+      animation: fade-in 1.25s var(--bezier) forwards;
+      animation-delay: 4.25s;
 
       a {
         color: var(--light-bg-color);
-      }
-    }
-
-    @keyframes skillmation {
-      50% {
-        opacity: 0.1;
-      }
-      100% {
-        opacity: 1;
       }
     }
 
@@ -120,19 +157,20 @@ aside {
       width: 2rem;
       height: 2rem;
       top: 10%;
-      animation: arrowmation 1.25s var(--bezier) forwards;
-      animation-delay: 0.25s;
+      animation: arrowmation 1s linear forwards;
+      animation-delay: 5.25s;
       opacity: 0;
     }
 
     @keyframes arrowmation {
-      50% {
-        opacity: 0.1;
+      25% {
+        opacity: 0.4;
+        top: 10%;
       }
 
       100% {
         opacity: 1;
-        top: 50%;
+        top: 20%;
       }
     }
 }

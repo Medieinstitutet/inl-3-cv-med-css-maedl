@@ -9,7 +9,20 @@
 }
 
 main {
-  width:50vw;
-  height: 90vh;
+  width:70vw;
   border: 1px solid #000;
 }
+
+.about-me {
+
+  .about-me-heading {
+    top: 1rem;
+  }
+
+  .about-me-p {
+    top: 4.75rem;
+    left: 5rem;
+    right: 5rem;
+  }
+}
+

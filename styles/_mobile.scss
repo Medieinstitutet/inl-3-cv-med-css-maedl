@@ -15,15 +15,14 @@ main {
   background-size: cover;
   height: 20vh;
   padding: 1rem;
-  position: relative;
+}
 
-  img {
-    height: 10vh;
-    width: 10vh;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: var(--box-shadow);
-  }
+.profile-pic {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
 }
 
 .about-me {
@@ -199,9 +198,10 @@ aside {
     flex-direction: column;
 
     li {
-      font-family: var(--mono-font);
+      
 
       p {
+        font-family: var(--mono-font);
         font-size: 1.25rem;
         text-align: center;
       }
@@ -218,14 +218,11 @@ aside {
 
 .edu-exp-article {
 
-  overflow-y: auto;
-
   .name {
     background-color: var(--accent-color);
     padding: 1rem 2rem;
     @include flex-center;
     flex-direction: column;
-    margin-bottom: 1rem;
   
     .name-heading {
       margin-bottom: 1rem;
@@ -236,8 +233,15 @@ aside {
     }
   }
 
+  .scroll-box {
+    padding: 1rem 2rem;
+    @include inset-shadow;
+  }
+
+
+
   section {
-    padding: var(--p-content-padding);
+    
 
     h2 {
       @include header-margin;

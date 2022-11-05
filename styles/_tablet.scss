@@ -10,13 +10,17 @@
 
 main {
   width:70vw;
-  border: 1px solid #000;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
-.about-me {
+.image-container {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
 
+.about-me {
+  
   .about-me-heading {
     top: 1rem;
   }

@@ -1,13 +1,11 @@
 .container {
- padding: 0;
  height: 100vh;
 }
 
 main {
-  height: 100%;
-  border: none;
+  max-height: 95vh;
   padding: 0;
-  width: 100vw;
+  min-width: 60vw;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: min-content 3fr;
@@ -15,37 +13,47 @@ main {
 
 .image-container {
   height: auto;
+  border-top-left-radius: var(--border-radius);
 }
 
 .profile-pic {
-  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   object-fit: cover;
+  height: 5rem;
+  width: 5rem;
 }
 
 .about-me {
+  border-top-right-radius: var(--border-radius);
+  padding: 5rem;
   background-color: var(--light-bg-color);
-
+  height: auto;
+  @include inset-shadow;
 
   .about-me-heading {
-    top: 2rem;
+    top: 1rem;
     color: var(--dark-bg-color);
   }
 
   .about-me-p {
-    top: 4.75rem;
-    left: 5rem;
-    right: 5rem;
+    top: 3rem;
+    left: 2rem;
+    right: 2rem;
     color: var(--dark-bg-color);
   }
 
 }
 
-.aside {
-  max-height: 100vh;
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-// contact
+#contact-heading, .contact-list {
+  animation-name: none;
+  opacity: 1;
+}
 
 .skill-box {
   padding: 0 2rem;
@@ -81,7 +89,8 @@ main {
     }
 }
 
-.edu-exp-section {
+.edu-exp-article {
+  @include inset-shadow;
   overflow-y: auto;
   min-height: 0;
 }

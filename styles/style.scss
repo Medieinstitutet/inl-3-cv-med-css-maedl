@@ -1,7 +1,7 @@
 @import 'normalize';
-@import 'debugger';
 @import 'general';  // variables and general styles 
 @import 'mobile';
+@import 'a11y';
 
 @media only screen and (min-width: 768px) { 
   @import 'tablet';
@@ -11,6 +11,6 @@
   @import 'laptop';
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1700px) {
   @import 'desktop';
 }

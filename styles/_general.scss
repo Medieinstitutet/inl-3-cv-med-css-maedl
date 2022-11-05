@@ -4,7 +4,6 @@
   --dark-bg-color: black;
   --light-bg-color: rgb(239, 239, 239);
   --accent-color: rgb(187, 104, 16);
-  --profile-img-size: 15vh;
   --p-content-padding: 0 1.5rem;
   --bezier: cubic-bezier(.84,.58,.69,.59);
   --img-gradient: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(2,1,0,0.24) 15%, rgba(14,8,0,0) 100%);
@@ -45,7 +44,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--p-font);
 }
 
 html, body, h1, h2, h3, p, hr {

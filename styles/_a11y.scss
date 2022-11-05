@@ -1,0 +1,16 @@
+
+@media (prefers-reduced-motion) {
+
+  .about-me-heading {
+    animation-name: none;
+    left: 4rem;
+    opacity: 1;
+  }
+
+  .about-me-p, 
+  #contact-heading,
+  .contact-list {
+    animation-name: none;
+    opacity: 1;
+  }
+}

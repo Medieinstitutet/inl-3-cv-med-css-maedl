@@ -207,10 +207,19 @@ aside {
       }
 
       progress {
-        background-color: var(--light-bg-color);
-        border-radius: 5px;
-        height: 0.75rem;
         margin-bottom: 1.25rem;
+
+        progress::-webkit-progress-bar {
+          border-radius: 100vw;
+        }
+
+        progress::-webkit-progress-value {
+          border-radius: 100vw;
+        }
+
+        progress::-moz-webkit-progress-bar {
+          border-radius: 100vw;
+        }
       }
     }
   }
@@ -247,16 +256,8 @@ aside {
       @include header-margin;
     }
 
-    h3 {
-
-    }
-
     p {
       margin-bottom: 1rem;
-    }
-
-    .year {
-
     }
   }
 

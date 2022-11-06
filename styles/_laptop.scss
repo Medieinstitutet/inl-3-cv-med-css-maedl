@@ -117,6 +117,7 @@ aside {
 
 .scroll-box {
   padding: 1rem;
+  @include inset-shadow;
 }
 
 .contact-link {

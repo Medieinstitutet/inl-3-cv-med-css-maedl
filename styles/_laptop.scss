@@ -108,7 +108,6 @@ aside {
 .edu-exp-article {
   @include inset-shadow;
   overflow-y: auto;
-  min-height: 0;
 }
 
 .contact-link {

@@ -40,8 +40,8 @@ main {
     color: var(--light-bg-color);
     -webkit-animation: headingmation 1.5s linear forwards;
             animation: headingmation 1.5s linear forwards;
-    -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
     z-index: 100;
     opacity: 0;
   }
@@ -81,10 +81,10 @@ main {
     left: 2rem;
     right: 2rem;
     opacity: 0;
-    -webkit-animation: fade-in 1s var(--bezier) forwards;
-            animation: fade-in 1s var(--bezier) forwards;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    -webkit-animation: fade-in 1.2s var(--bezier) forwards;
+            animation: fade-in 1.2s var(--bezier) forwards;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
   }
 
 }
@@ -126,8 +126,8 @@ aside {
   -webkit-animation: fade-in 1.25s var(--bezier) forwards;
           animation: fade-in 1.25s var(--bezier) forwards;
   opacity: 0;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
 
 .contact-list {
@@ -138,8 +138,8 @@ aside {
   -webkit-animation: fade-in 1.25s var(--bezier) forwards;
           animation: fade-in 1.25s var(--bezier) forwards;
   opacity: 0;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 
   a, a:visited {
     color: var(--light-bg-color);
@@ -188,13 +188,14 @@ aside {
   position: relative;
   
     h2 {
+      font-size: 1.1rem;
       position: absolute;
       opacity: 0;
       top: -10%;
       -webkit-animation: fade-in 1.25s var(--bezier) forwards;
               animation: fade-in 1.25s var(--bezier) forwards;
-      -webkit-animation-delay: 4.25s;
-              animation-delay: 4.25s;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
 
       a {
         color: var(--light-bg-color);
@@ -203,13 +204,13 @@ aside {
 
     img {
       position: absolute;
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       top: 10%;
-      -webkit-animation: arrowmation 1s linear forwards;
-              animation: arrowmation 1s linear forwards;
-      -webkit-animation-delay: 5.25s;
-              animation-delay: 5.25s;
+      -webkit-animation: arrowmation 1.2s linear forwards;
+              animation: arrowmation 1.2s linear forwards;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
       opacity: 0;
     }
 

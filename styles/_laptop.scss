@@ -77,33 +77,40 @@ aside {
     margin-bottom: 0.5rem;
   }
 
-  .skill-list {
-
-    li {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.5rem;
-    
-
-      p {
-        font-size: 1rem;
-        flex: 2;
-        text-align: start;
-        margin: 0;
-        }
-
-        progress {
-          flex: 1;
-          margin: 0;
-          height: 0.75rem;
-          width: 99%;
-        }
-
-      }
-    }
 }
+
+.skill-list {
+
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    transition: all 1s var(--bezier);
+
+    p {
+      font-size: 1rem;
+      flex: 2;
+      text-align: start;
+      margin: 0;
+      }
+
+      progress {
+        flex: 1;
+        margin: 0;
+        height: 0.75rem;
+        width: 99%;
+      }
+
+    }
+
+  }
+
+  a:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+
 
 .edu-exp-article {
   @include inset-shadow;

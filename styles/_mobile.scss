@@ -143,11 +143,8 @@ aside {
 
   a, a:visited {
     color: var(--light-bg-color);
+    margin-right: 0.1rem;
     display: block;
-    text-underline-offset: 0.3rem;
-  }
-
-  a[href^="tel:"] {
     text-decoration: none;
   }
 
@@ -199,6 +196,7 @@ aside {
 
       a {
         color: var(--light-bg-color);
+        text-decoration: underline;
       }
     }
 
@@ -332,6 +330,10 @@ aside {
     padding-left: 1rem;
     font-family: 'Dancing Script', cursive;
     font-size: 1.25rem;
+  }
+
+  a, a:visited {
+    color: var(--dark-bg-color);
   }
 
 }

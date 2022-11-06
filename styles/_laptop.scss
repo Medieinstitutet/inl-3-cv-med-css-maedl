@@ -1,15 +1,16 @@
 .container {
- height: 100vh;
+  height: 100vh;
 }
 
 main {
-  max-height: 95vh;
+  height: 95vh;
   padding: 0;
-  min-width: 60vw;
+  width: 60vw;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: -webkit-min-content 3fr;
   grid-template-rows: min-content 3fr;
+  overflow-y: hidden;
 }
 
 .image-container {
@@ -49,20 +50,17 @@ main {
 aside {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+}
+
+.contact-section {
+  height: 40vh;
 }
 
 #contact-heading, .contact-list {
   -webkit-animation-name: none;
           animation-name: none;
   opacity: 1;
-}
-
-.contact-list {
-
-  li {
-  }
-
 }
 
 .skill-box {
@@ -79,13 +77,17 @@ aside {
 
 }
 
+.skill-heading {
+  display: none; // heading and scroll link for mobile not needed for visual orientation
+}
+
 .skill-list {
 
   li {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
     transition: all 1s var(--bezier);
 
@@ -99,26 +101,24 @@ aside {
       progress {
         flex: 1;
         margin: 0;
-        height: 0.75rem;
         width: 99%;
       }
 
     }
-
   }
 
   a:hover {
     background-color: rgba($color: #ffffff, $alpha: 0.2);
 }
 
-
 .edu-exp-article {
-  @include inset-shadow;
   overflow-y: auto;
+}
+
+.scroll-box {
+  padding: 1rem;
 }
 
 .contact-link {
   visibility: hidden;
 }
-
-

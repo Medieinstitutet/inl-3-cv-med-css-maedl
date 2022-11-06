@@ -13,7 +13,7 @@ main {
   background-image: var(--img-gradient),
                     url('/images/max-edlund-working-sm.jpg');
   background-size: cover;
-  height: 20vh;
+  height: 20vh;  // wierd approach, but trying to match wireframe..
   padding: 1rem;
 }
 
@@ -27,10 +27,10 @@ main {
 }
 
 .about-me {
-  height: 30vh;
+  height: 30vh;  // wierd approach pt 2
   position: relative;
   background-color: var(--dark-bg-color);
-  overflow-y: auto;
+  overflow-y: auto; // should fit, but if not
 
   .about-me-heading {
     position: absolute;
@@ -113,7 +113,7 @@ aside {
   }
 
 .contact-section {
-  height: 50vh;
+  height: 50vh;  // wierd approach pt 3, it works, but I wont be doing this again :)
   display: grid;
   grid-template-rows: -webkit-min-content 2fr 1fr;
   grid-template-rows: min-content 2fr 1fr;
@@ -175,7 +175,6 @@ aside {
     background-color: var(--light-bg-color);
     margin-right: 0.5rem;
   }
-
 
 }
 
@@ -255,7 +254,6 @@ aside {
 
     li {
       
-
       p {
         font-family: var(--mono-font);
         font-size: 1.25rem;
@@ -264,6 +262,7 @@ aside {
 
       progress {
         margin-bottom: 1.25rem;
+
 
         progress::-webkit-progress-bar {
           border-radius: 100vw;
@@ -276,6 +275,10 @@ aside {
         progress::-moz-webkit-progress-bar {
           border-radius: 100vw;
         }
+
+        // these progress pseudo classes seem to "normalize" between browsers
+        // probably wont be using this element like this in the future
+
       }
     }
   }
@@ -298,16 +301,8 @@ aside {
     }
   }
 
-  .scroll-box {
-    padding: 1rem 2rem;
-    @include inset-shadow;
-  }
-
-
-
   section {
     
-
     h2 {
       @include header-margin;
     }
@@ -329,12 +324,13 @@ aside {
 
 }
 
+  // landscape for mobile
+
 @media only screen and (max-height: 540px) and (orientation: landscape) {
  
   .container {
     padding: 0;
   }
-
 
   .image-container {
     background-position-y: 60%;

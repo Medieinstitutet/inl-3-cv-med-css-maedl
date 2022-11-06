@@ -1,7 +1,9 @@
-@import 'normalize';
-@import 'general';  // variables and general styles 
+@import 'normalize';  // a trimmed version of normalize, might not be complete if site is modified
+@import 'general';    // variables and general styles 
 @import 'mobile';
-@import 'a11y';
+@import 'a11y';       // accessibility styles
+
+  // media query custom breakpoints for this design
 
 @media only screen and (min-width: 768px) { 
   @import 'tablet';

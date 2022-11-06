@@ -118,7 +118,6 @@ aside {
   grid-template-rows: -webkit-min-content 2fr 1fr;
   grid-template-rows: min-content 2fr 1fr;
   justify-content: center;
-  padding: 1rem 0rem;
 }
 
 #contact-heading {
@@ -132,6 +131,7 @@ aside {
 }
 
 .contact-list {
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -144,25 +144,42 @@ aside {
   a, a:visited {
     color: var(--light-bg-color);
     display: block;
+    text-underline-offset: 0.3rem;
+  }
+
+  a[href^="tel:"] {
     text-decoration: none;
   }
 
   li {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     position: relative;
     width: 100%;
+    display: flex;
+    padding: 0.1rem;
   }
 
-  a::after {
+  li::after {
     content: '';
     position: absolute;
-    width: 8rem;
+    width: 75%;
     display: block;
     background-color: var(--light-bg-color);
     height: 1px;
     bottom: -0.75rem;
-    transform: translateX(25%);
+    transform:translateX(10%);
   }
+
+  .contact-icon {
+    padding: 0.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--light-bg-color);
+    margin-right: 0.5rem;
+  }
+
+
 }
 
 .skill-heading {

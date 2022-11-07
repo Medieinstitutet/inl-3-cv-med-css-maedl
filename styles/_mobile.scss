@@ -324,6 +324,11 @@ aside {
 
 }
 
+.scroll-box {
+  padding: 1rem;
+  @include inset-shadow;
+}
+
   // landscape for mobile
 
 @media only screen and (max-height: 540px) and (orientation: landscape) {

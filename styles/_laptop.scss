@@ -116,10 +116,9 @@ aside {
 }
 
 .scroll-box {
-  padding: 1rem;
-  @include inset-shadow;
+  padding: 2rem;
 }
 
 .contact-link {
-  visibility: hidden;
+ display: none; // no need for this
 }

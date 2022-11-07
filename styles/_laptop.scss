@@ -1,0 +1,124 @@
+.container {
+  height: 100vh;
+}
+
+main {
+  height: 95vh;
+  padding: 0;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: -webkit-min-content 3fr;
+  grid-template-rows: min-content 3fr;
+  overflow-y: hidden;
+}
+
+.image-container {
+  height: auto;
+  border-top-left-radius: var(--border-radius);
+}
+
+.profile-pic {
+  box-shadow: var(--box-shadow);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 5rem;
+  width: 5rem;
+}
+
+.about-me {
+  border-top-right-radius: var(--border-radius);
+  padding: 5rem;
+  background-color: var(--light-bg-color);
+  height: auto;
+  @include inset-shadow;
+
+  .about-me-heading {
+    top: 1rem;
+    color: var(--dark-bg-color);
+  }
+
+  .about-me-p {
+    top: 3rem;
+    left: 2rem;
+    right: 2rem;
+    color: var(--dark-bg-color);
+  }
+
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-section {
+  height: 40vh;
+}
+
+#contact-heading, .contact-list {
+  -webkit-animation-name: none;
+          animation-name: none;
+  opacity: 1;
+}
+
+.skill-box {
+  padding: 0 2rem;
+
+  .skill-subtitle {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+.skill-heading {
+  display: none; // heading and scroll link for mobile not needed for visual orientation
+}
+
+.skill-list {
+
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    transition: all 1s var(--bezier);
+
+    p {
+      font-size: 1rem;
+      flex: 2;
+      text-align: start;
+      margin: 0;
+      }
+
+      progress {
+        flex: 1;
+        margin: 0;
+        width: 99%;
+      }
+
+    }
+  }
+
+  a:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+}
+
+.edu-exp-article {
+  overflow-y: auto;
+}
+
+.scroll-box {
+  padding: 2rem;
+}
+
+.contact-link {
+ display: none; // no need for this
+}

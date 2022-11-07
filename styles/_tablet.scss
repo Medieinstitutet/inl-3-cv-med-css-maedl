@@ -1,0 +1,37 @@
+.container {
+  background-color: var(--light-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  width:70vw;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.image-container {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.about-me {
+  
+  .about-me-heading {
+    top: 1rem;
+  }
+
+  .about-me-p {
+    top: 4.75rem;
+    left: 5rem;
+    right: 5rem;
+  }
+}
+
+.contact-list {
+  margin-bottom: 1rem;
+}

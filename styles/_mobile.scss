@@ -1,0 +1,363 @@
+body {
+  background-color: var(--light-bg-color);
+}
+
+main {
+  background-color: var(--light-bg-color);
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: var(--img-gradient),
+                    url('../images/max-edlund-working-sm.jpg');
+  background-size: cover;
+  height: 20vh;  // wierd approach, but trying to match wireframe..
+  padding: 1rem;
+}
+
+.profile-pic {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: var(--box-shadow);
+}
+
+.about-me {
+  height: 30vh;  // wierd approach pt 2
+  position: relative;
+  background-color: var(--dark-bg-color);
+  overflow-y: auto; // should fit, but if not
+
+  .about-me-heading {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    color: var(--light-bg-color);
+    -webkit-animation: headingmation 1.5s linear forwards;
+            animation: headingmation 1.5s linear forwards;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    z-index: 100;
+    opacity: 0;
+  }
+  
+  @-webkit-keyframes headingmation {
+
+    75% {
+      opacity: 1;
+      left: 2rem;
+    }
+
+    100% {
+      left: 4rem;
+      opacity: 1;
+    }
+
+  }
+  
+  @keyframes headingmation {
+
+    75% {
+      opacity: 1;
+      left: 2rem;
+    }
+
+    100% {
+      left: 4rem;
+      opacity: 1;
+    }
+
+  }
+  
+  .about-me-p {
+    color: var(--light-bg-color);
+    position: absolute;
+    top: 3.75rem;
+    left: 2rem;
+    right: 2rem;
+    opacity: 0;
+    -webkit-animation: fade-in 1.2s var(--bezier) forwards;
+            animation: fade-in 1.2s var(--bezier) forwards;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+  }
+
+}
+
+@-webkit-keyframes fade-in {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+aside {
+  background-color: var(--dark-bg-color);
+  color: var(--light-bg-color);
+  }
+
+.contact-section {
+  height: 50vh;  // wierd approach pt 3, it works, but I wont be doing this again :)
+  display: grid;
+  grid-template-rows: -webkit-min-content 2fr 1fr;
+  grid-template-rows: min-content 2fr 1fr;
+  justify-content: center;
+}
+
+#contact-heading {
+  margin-bottom: 1rem;
+  justify-self: center;
+  -webkit-animation: fade-in 1.25s var(--bezier) forwards;
+          animation: fade-in 1.25s var(--bezier) forwards;
+  opacity: 0;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.contact-list {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  -webkit-animation: fade-in 1.25s var(--bezier) forwards;
+          animation: fade-in 1.25s var(--bezier) forwards;
+  opacity: 0;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+
+  a, a:visited {
+    color: var(--light-bg-color);
+    margin-right: 0.1rem;
+    display: block;
+    text-decoration: none;
+  }
+
+  li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0.1rem;
+  }
+
+  li::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    display: block;
+    background-color: var(--light-bg-color);
+    height: 1px;
+    bottom: -0.75rem;
+    transform:translateX(10%);
+  }
+
+  .contact-icon {
+    padding: 0.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--light-bg-color);
+    margin-right: 0.5rem;
+  }
+
+}
+
+.skill-heading {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+    h2 {
+      font-size: 1.1rem;
+      position: absolute;
+      opacity: 0;
+      top: -10%;
+      -webkit-animation: fade-in 1.25s var(--bezier) forwards;
+              animation: fade-in 1.25s var(--bezier) forwards;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+
+      a {
+        color: var(--light-bg-color);
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 10%;
+      -webkit-animation: arrowmation 1.2s linear forwards;
+              animation: arrowmation 1.2s linear forwards;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
+      opacity: 0;
+    }
+
+    @-webkit-keyframes arrowmation {
+      25% {
+        opacity: 0.4;
+        top: 10%;
+      }
+
+      100% {
+        opacity: 1;
+        top: 20%;
+      }
+    }
+
+    @keyframes arrowmation {
+      25% {
+        opacity: 0.4;
+        top: 10%;
+      }
+
+      100% {
+        opacity: 1;
+        top: 20%;
+      }
+    }
+}
+
+.skill-box {
+  padding: 1rem 0;
+
+  .skill-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-list {
+    @include flex-center;
+    flex-direction: column;
+
+    li {
+      
+      p {
+        font-family: var(--mono-font);
+        font-size: 1.25rem;
+        text-align: center;
+      }
+
+      progress {
+        margin-bottom: 1.25rem;
+
+
+        progress::-webkit-progress-bar {
+          border-radius: 100vw;
+        }
+
+        progress::-webkit-progress-value {
+          border-radius: 100vw;
+        }
+
+        progress::-moz-webkit-progress-bar {
+          border-radius: 100vw;
+        }
+
+        // these progress pseudo classes seem to "normalize" between browsers
+        // probably wont be using this element like this in the future
+
+      }
+    }
+  }
+}
+
+.edu-exp-article {
+
+  .name {
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    @include flex-center;
+    flex-direction: column;
+  
+    .name-heading {
+      margin-bottom: 1rem;
+    }
+
+    .job-title {
+      font-family: var(--mono-font);
+    }
+  }
+
+  section {
+    
+    h2 {
+      @include header-margin;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .signature {
+    padding-left: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+  }
+
+  a, a:visited {
+    color: var(--dark-bg-color);
+  }
+
+}
+
+.scroll-box {
+  padding: 1rem;
+  @include inset-shadow;
+}
+
+  // landscape for mobile
+
+@media only screen and (max-height: 540px) and (orientation: landscape) {
+ 
+  .container {
+    padding: 0;
+  }
+
+  .image-container {
+    background-position-y: 60%;
+    border-radius: 0;
+    height: 40vh;
+    padding: 2rem;
+  }
+
+  .profile-pic {
+    height: 20vh;
+    width: 20vh;
+  }
+
+  .about-me {
+    height: 60vh;
+  }
+
+  .contact-section {
+    height: auto;
+  }
+
+  .skill-heading {
+    visibility: hidden;
+  }
+}

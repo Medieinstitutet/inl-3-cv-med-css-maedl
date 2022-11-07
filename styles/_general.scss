@@ -1,0 +1,64 @@
+:root {
+  --border-radius: 5px;
+  --box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.1);
+  --dark-bg-color: black;
+  --light-bg-color: rgb(239, 239, 239);
+  --accent-color: rgb(187, 104, 16);
+  --p-content-padding: 0 1.5rem;
+  --bezier: cubic-bezier(.84,.58,.69,.59);
+  --img-gradient: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(2,1,0,0.24) 15%, rgba(14,8,0,0) 100%);
+  --heading-font: 'Cairo', sans-serif;
+  --p-font: 'Cairo', sans-serif;
+  --mono-font: 'Xanh Mono', monospace;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin header-margin {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+@mixin inset-shadow {
+  box-shadow: 0px -3px 20px 0px rgba(0,0,0,0.2) inset;
+  box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.2) inset;
+  -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.2) inset;
+  -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.2) inset;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--p-font);
+}
+
+html, body, h1, h2, h3, p, hr {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+}
+
+p {
+  font-family: var(--p-font);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
